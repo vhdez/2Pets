@@ -1,11 +1,14 @@
 package org.sla;
 
+// Author: Mr. Hernandez
+
 public class Pets {
     // Fields
 
     // Method
     public static void main(String[] args) {
         Dog[] dogs = new Dog[2];
+        // Mr. Hernandez did this
         dogs[0] = new Dog();
         dogs[0].age = 2;
         dogs[0].color = "Black";

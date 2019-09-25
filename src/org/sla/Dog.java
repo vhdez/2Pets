@@ -1,5 +1,7 @@
 package org.sla;
 
+// Author: Mr. Hernandez
+
 public class Dog {
     // Fields describe the class
     String color;
