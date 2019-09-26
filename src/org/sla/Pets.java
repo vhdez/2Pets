@@ -7,7 +7,7 @@ public class Pets {
 
     // Method
     public static void main(String[] args) {
-        Dog[] dogs = new Dog[2];
+        Dog[] dogs = new Dog[3];
         // Mr. Hernandez did this
         dogs[0] = new Dog();
         dogs[0].age = 2;
@@ -29,8 +29,38 @@ public class Pets {
         dogs[1].name = "Java";
         dogs[1].petType = "dog";
 
+
+        //Jack
+        dogs[2] = new Dog();
+        dogs[2].age = 5;
+        dogs[2].color = "Brown";
+        dogs[2].size = "Big";
+        dogs[2].name = "Eevee";
+        dogs[2].petType = "dog";
+
         for (int i = 0; i < dogs.length; i++) {
             System.out.println(dogs[i].name + " is a " + dogs[i].petType + " of age " + dogs[i].age + " and is color " + dogs[i].color + " and is of size " + dogs[i].size);
         }
+
+        Owl[] owls = new Owl[1];
+
+        owls[0] = new Owl();
+        owls[0].age = 3;
+        owls[0].color = "Brown and Black";
+        owls[0].size = "small";
+        owls[0].name = "Sowl";
+        owls[0].petType = "Owl";
+
+        for (int i = 0; i < owls.length; i++) {
+            System.out.println(owls[i].name + " is a " + owls[i].size + " " + owls[i].petType + ". he is " + owls[i].age + " years old and he is " + owls[i].color);
+        }
+
+        owls[0].barks();
+        String person = "Sal";
+        if (owls[0].pecks(person)) {
+            System.out.println("Sowl pecked Sal and Sowl flew away!");
+        }
+
+
     }
 }

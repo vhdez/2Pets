@@ -2,7 +2,7 @@ package org.sla;
 
 // Author: Mr. Hernandez
 
-public class Dog {
+public class Owl {
     // Fields describe the class
     String color;
     String size;
@@ -11,14 +11,16 @@ public class Dog {
     String petType;
 
     // Methods do actions for the class
-    boolean bites(String whom) {
-        if (whom.equals("Jack")) {
+    boolean pecks(String whom) {
+        if (whom.equals("Sal")) {
             return true;
-        }
+        }else
         return false;
+
+
+    }
+    void barks() {
+        System.out.println("Hoooo");
     }
 
-    void barks() {
-        System.out.println("Woof");
-    }
 }
