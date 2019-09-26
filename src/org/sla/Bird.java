@@ -43,7 +43,11 @@ public class Bird {
 
     void chirp(){
 
-        System.out.println("Chirp!");
+        if(!this.breed.equals("Angry")) {
+            System.out.println("Chirp!");
+        }else{
+            System.out.println("Kaw!");
+        }
 
     }
 

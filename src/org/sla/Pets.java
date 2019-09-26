@@ -39,8 +39,7 @@ public class Pets {
         dogs[2].size = "Medium";
         dogs[2].name = "Processing";
         dogs[2].petType = "dog";
-
-
+        
 
         for (int i = 0; i < dogs.length; i++) {
             System.out.println(dogs[i].name + " is a " + dogs[i].petType + " of age " + dogs[i].age + " and is color " + dogs[i].color + " and is of size " + dogs[i].size);
@@ -53,6 +52,9 @@ public class Pets {
         Chuck.addToArray(birds,1);
 
         System.out.println("\n");
+
+        Red.chirp();
+        Chuck.fly();
 
         for(int i = 0; i < birds.length; i ++){
             System.out.println(birds[i].getName() + " is a " + birds[i].getBreed() + " bird of color " + birds[i].getColor() + " and age " + birds[i].getAge() + ".");
