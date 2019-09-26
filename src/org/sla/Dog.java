@@ -12,6 +12,10 @@ public class Dog {
     int speed;
     Parrot[] friends;
 
+    public Dog(){
+        this.friends = new Parrot[256];
+    }
+
     // Methods do actions for the class
     public Dog(String name, int age, String color, String size, String petType, int speed){
         this.name = name;
@@ -40,6 +44,12 @@ public class Dog {
                 " hair and is " + age +
                 " years old. It is a " + size.toLowerCase() + " " + petType.toLowerCase());
     }
+    boolean bites(String whom){
+        if(whom.equals("Jack")){
+            return true;
+        }
+        return false;
+    }
 
     public void bark(){
         if(age >= 3){
@@ -53,7 +63,7 @@ public class Dog {
         if(speed <= 5){
             System.out.println(name + ": I can't go fetch. I'm too slow.");
         }else{
-            System.out.print(name + ": I caught it!");
+            System.out.println(name + ": I caught it!");
         }
     }
 
