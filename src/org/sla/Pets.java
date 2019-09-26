@@ -4,33 +4,33 @@ package org.sla;
 
 public class Pets {
     // Fields
-
+    static Dog[] dogs = new Dog[4];
     // Method
     public static void main(String[] args) {
-        Dog[] dogs = new Dog[2];
-        // Mr. Hernandez did this
-        dogs[0] = new Dog();
-        dogs[0].age = 2;
-        dogs[0].color = "Black";
-        dogs[0].size = "Big";
-        dogs[0].name = "Lincoln";
-        dogs[0].petType = "dog";
-
-        dogs[0].barks();
-        String someone = "Nicco";
-        if (dogs[0].bites(someone)) {
-            System.out.println("bit someone!");
+        System.out.println("-----------------------------------");
+        Dog dog1 = new Dog("Nicco", 4, "Brown", "Big", "Dog", 6);
+        Dog dog2 = new Dog("Jack", 2, "Black", "Small", "Dog", 9);
+        Dog dog3 = new Dog("Sal", 8, "White", "Tall", "Dog", 4);
+        Dog dog4 = new Dog("Hayden", 3, "Brown", "Fat", "Dog", 2);
+        dogs[0] = dog1;
+        dogs[1] = dog2;
+        dogs[2] = dog3;
+        dogs[3] = dog4;
+        for(int i = 0; i < dogs.length; i++){
+            dogs[i].announce();
         }
-
-        dogs[1] = new Dog();
-        dogs[1].age = 2;
-        dogs[1].color = "White";
-        dogs[1].size = "Small";
-        dogs[1].name = "Java";
-        dogs[1].petType = "dog";
-
-        for (int i = 0; i < dogs.length; i++) {
-            System.out.println(dogs[i].name + " is a " + dogs[i].petType + " of age " + dogs[i].age + " and is color " + dogs[i].color + " and is of size " + dogs[i].size);
+        for(int i = 0; i < dogs.length; i++){
+            if (i < 2){
+                dogs[i].bark();
+            }else{
+                dogs[i].fetch();
+            }
         }
+        System.out.println("-----------------------------------");
+        Parrot parrot = new Parrot("Parrot", 5, "Red", "parrot", true);
+        parrot.addFriend(dog1);
+        parrot.addFriend(dog3);
+        parrot.announce();
+        parrot.announceFriends();
     }
 }
