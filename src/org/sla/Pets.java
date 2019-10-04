@@ -73,7 +73,7 @@ public class Pets {
         owls[0].barks();
         String person = "Sal";
         if (owls[0].pecks(person)) {
-            System.out.println("Sowl pecked Sal and Sowl flew away!");
+            System.out.println("*Sowl pecked Sal and Sowl flew away!*");
         }
 
 
