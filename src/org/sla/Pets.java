@@ -7,7 +7,9 @@ public class Pets {
 
     // Method
     public static void main(String[] args) {
-        Dog[] dogs = new Dog[3];
+        Dog[] dogs = new Dog[256];
+        Bird[] birds = new Bird[2];
+
         // Mr. Hernandez did this
         dogs[0] = new Dog();
         dogs[0].age = 2;
@@ -16,7 +18,7 @@ public class Pets {
         dogs[0].name = "Lincoln";
         dogs[0].petType = "dog";
 
-        dogs[0].barks();
+        dogs[0].bark();
         String someone = "Nicco";
         if (dogs[0].bites(someone)) {
             System.out.println("bit someone!");
@@ -24,22 +26,35 @@ public class Pets {
 
         dogs[1] = new Dog();
         dogs[1].age = 2;
-        dogs[1].color = "White";
+        dogs[1].color = "Brown";
         dogs[1].size = "Small";
         dogs[1].name = "Java";
         dogs[1].petType = "dog";
 
 
         //Jack
+        dogs[7] = new Dog();
+        dogs[7].age = 5;
+        dogs[7].color = "Brown";
+        dogs[7].size = "Big";
+        dogs[7].name = "Eevee";
+        dogs[7].petType = "dog";
+
+        // Pretty much everything from here on out is from Nicco.
+
         dogs[2] = new Dog();
-        dogs[2].age = 5;
-        dogs[2].color = "Brown";
-        dogs[2].size = "Big";
-        dogs[2].name = "Eevee";
+        dogs[2].age = 2;
+        dogs[2].color = "Gray";
+        dogs[2].size = "Medium";
+        dogs[2].name = "Processing";
         dogs[2].petType = "dog";
 
+
         for (int i = 0; i < dogs.length; i++) {
-            System.out.println(dogs[i].name + " is a " + dogs[i].petType + " of age " + dogs[i].age + " and is color " + dogs[i].color + " and is of size " + dogs[i].size);
+            if (dogs[i] != null) {
+                System.out.println(dogs[i].name + " is a " + dogs[i].petType + " of age " + dogs[i].age + " and is color " + dogs[i].color + " and is of size " + dogs[i].size);
+                System.out.println("-----------------------------------");
+            }
         }
 
         Owl[] owls = new Owl[1];
@@ -62,5 +77,50 @@ public class Pets {
         }
 
 
+
+
+        Bird Red = new Bird("Red", "Angry", "Red", 5);
+        Bird Chuck = new Bird("Yellow", "Triangle", "Chuck", 5);
+        Red.addToArray(birds, 0);
+        Chuck.addToArray(birds, 1);
+        System.out.println("\n");
+        Red.chirp();
+        Chuck.fly();
+
+        for (int i = 0; i < birds.length; i++) {
+            System.out.println(birds[i].getName() + " is a " + birds[i].getBreed() + " bird of color " + birds[i].getColor() + " and age " + birds[i].getAge() + ".");
+        }
+
+
+        Dog dog1 = new Dog("Nicco", 4, "Brown", "Big", "Dog", 6);
+        Dog dog2 = new Dog("Jack", 2, "Black", "Small", "Dog", 9);
+        Dog dog3 = new Dog("Sal", 8, "White", "Tall", "Dog", 4);
+        Dog dog4 = new Dog("Hayden", 3, "Brown", "Fat", "Dog", 2);
+        dogs[3] = dog1;
+        dogs[4] = dog2;
+        dogs[5] = dog3;
+        dogs[6] = dog4;
+        for (int i = 3; i < dogs.length; i++) {
+            if(dogs[i] != null) {
+                dogs[i].announce();
+            }
+        }
+        for (int i = 3; i < dogs.length; i++) {
+            if(dogs[i] != null) {
+                if (i < 2) {
+                    dogs[i].bark();
+                } else {
+                    dogs[i].fetch();
+                }
+            }
+        }
+
+
+        System.out.println("-----------------------------------");
+        Parrot parrot = new Parrot("Parrot", 5, "Red", "parrot", true);
+        parrot.addFriend(dog1);
+        parrot.addFriend(dog3);
+        parrot.announce();
+        parrot.announceFriends();
     }
 }
