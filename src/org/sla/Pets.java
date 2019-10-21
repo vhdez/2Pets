@@ -32,7 +32,7 @@ public class Pets {
         dogs[0].petType = "dog";
 
         dogs[0].bark();
-        String someone = "Niccoooooooooooooo";
+        String someone = "Niccooooooooooooooo";
         if (dogs[0].bites(someone)) {
             System.out.println("bit someone!");
         }
