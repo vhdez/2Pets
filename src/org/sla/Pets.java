@@ -24,7 +24,6 @@ public class Pets {
             System.out.println(birds[i].getName() + " is a " + birds[i].getBreed() + " bird of color " + birds[i].getColor() + " and age " + birds[i].getAge() + ".");
         }
 
-
         Dog dog = new Dog("Hayden", "white", 10, 10, 10, "dog");
 
         pets[0] = dog;
