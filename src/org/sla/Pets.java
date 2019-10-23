@@ -11,7 +11,6 @@ public class Pets {
 
         // Mr. Hernandez did this
 
-
         Bird Red = new Bird("Red", "Angry", "Red", 5);
         Bird Chuck = new Bird("Yellow", "Triangle", "Chuck", 5);
         Red.addToArray(birds, 0);
