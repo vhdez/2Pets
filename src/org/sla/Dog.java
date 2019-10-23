@@ -16,6 +16,7 @@ public class Dog extends Pet {
         if (whom.equals("Jack")) {
             return true;
         }
+
         return false;
     }
 
