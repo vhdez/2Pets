@@ -46,7 +46,7 @@ public class Pet {
                         if(i > 0){
                             System.out.println(name +  " is also friends with " + friend.name + ", a " +friend.color.toLowerCase() + " " + petType + "." );
                         }else {
-                            System.out.println(name + " is friends with " + friend.name + ", a " + friend.color.toLowerCase() + " " + petType + ".");
+                            System.out.println(name + " is friends with " + friend.name + ", a " + friend.color.toLowerCase() + " " + friend.petType + ".");
                         }
                     }
                 }

@@ -37,7 +37,12 @@ public class Pets {
 
         dog2.announce();
         dog2.addFriend(dog);
-        dog2.announceFriends();;
+        dog2.announceFriends();
 
+        Fish fish = new Fish("Rainbow Fish", "rainbow", 12, 12, 5*10, "fish");
+        fish.addFriend(dog);
+        dog.addFriend(fish);
+        fish.announce();
+        fish.announceFriends();
     }
 }
