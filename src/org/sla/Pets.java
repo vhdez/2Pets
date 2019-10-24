@@ -1,4 +1,5 @@
 package org.sla;
+
 import java.util.Scanner;
 
 // Author: Mr. Hernandez
@@ -13,8 +14,8 @@ public class Pets {
         Scanner input = new Scanner(System.in);
         // Mr. Hernandez did this
 
-        Bird Red = new Bird("Red", "Angry", 5, 5, 5,"Bird");
-        Bird Chuck = new Bird("Chuck", "Yellow", 5, 5,3,"Bird");
+        Bird Red = new Bird("Red", "Angry", 5, 5, 5, "Bird");
+        Bird Chuck = new Bird("Chuck", "Yellow", 5, 5, 3, "Bird");
         Red.addToArray(birds, 0);
         Chuck.addToArray(birds, 1);
         Red.addFriend(Chuck);
@@ -31,24 +32,29 @@ public class Pets {
             System.out.println("\n");
         }
 
-        Dog dog = new Dog("Hayden", "white", 10, 10, 10, "dog");
+        Dog dog = new Dog("Hayden", "white", 10, 7, 10);
 
         pets[0] = dog;
 
-        Dog dog2 = new Dog("Sal", "yellow", 6, 9, 11, "dog");
+        Dog dog2 = new Dog("Sal", "yellow", 6, 9, 11);
 
         pets[1] = dog2;
-        dog.addFriend(pets[1]);
-
-        dog.announce();
-        dog.announceFriends();
-
-        dog2.announce();
+        dog.addFriend(dog2);
         dog2.addFriend(dog);
-        dog2.announceFriends();;
+
+        Parrot parrot = new Parrot("Parry", "red", 2, 2, 20);
+        pets[2] = parrot;
+        parrot.addFriend(dog);
+        dog.addFriend(parrot);
+
+        for (int i = 0; i < pets.length; i++) {
+            if(pets[i] != null) {
+                pets[i].announce();
+                pets[i].announceFriends();
+            }
+        }
 
         System.out.println("\n");
-
         Red.feed(input);
 
 

@@ -34,7 +34,7 @@ public class Pet {
         System.out.println(name + " is a " +
                 color + " " + petType +
                 " and is " + age +
-                " years old. It is " + height + " feet tall and it weighs " + weight + ".");
+                " years old. It is " + height + " feet tall and it weighs " + weight + " lbs.");
     }
 
     public void announceFriends(){

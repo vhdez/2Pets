@@ -7,8 +7,8 @@ public class Dog extends Pet {
 
     int speed;
 
-    public Dog(String name, String color, int age, int height, int weight, String petType) {
-        super(name, color, age, height, weight, petType);
+    public Dog(String name, String color, int age, int height, int weight) {
+        super(name, color, age, height, weight, "dog");
     }
 
     // Methods do actions for the class
