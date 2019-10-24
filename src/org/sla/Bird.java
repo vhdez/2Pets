@@ -4,40 +4,18 @@ import java.util.Scanner;
 //This is Nicco's stuff.
 
 
-public class Bird {
+public class Bird extends Pet{
 
     //private Scanner input;
 
-    private String color;
-    private String breed;
-    private String name;
-    private int age;
+    //private String breed;
     private String food;
 
-    public Bird(String color, String breed, String name, int age){
-
-        this.color = color;
-        this.breed = breed;
-        this.name = name;
-        this.age = age;
-
+    public Bird(String name, String color, int age, int height, int weight, String petType) {
+        super(name, color, age, height, weight, petType);
+        //this.food = food;
     }
 
-    String getColor() {
-        return this.color;
-    }
-
-    String getBreed() {
-        return this.breed;
-    }
-
-    String getName() {
-        return this.name;
-    }
-
-    int getAge() {
-        return this.age;
-    }
 
 
     void addToArray(Bird[] birds, int n){
@@ -49,7 +27,7 @@ public class Bird {
 
     void chirp(){
 
-        if(!this.breed.equals("Angry")) {
+        if(!this.petType.equals("Angry")) {
             System.out.println("Chirp!");
         }else{
             System.out.println("Kaw!");
@@ -59,7 +37,7 @@ public class Bird {
 
     boolean fly(){
 
-        if(this.breed.equals("Ostrich") || this.breed.equals("Penguin") || this.breed.equals("Roadrunner") || this.breed.equals("Peacock")) {
+        if(this.petType.equals("Ostrich") || this.petType.equals("Penguin") || this.petType.equals("Roadrunner") || this.petType.equals("Peacock")) {
 
             System.out.println(this.name + " can't fly!");
             return false;
