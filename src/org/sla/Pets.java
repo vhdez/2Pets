@@ -51,5 +51,22 @@ public class Pets {
 
         Red.feed(input);
 
+
+        pets[2] = new Owl("Sowl","Brown and Black", 3, 1, 1, "owl");
+
+        for (int i = 0; i < pets.length; i++) {
+            if (pets[i] != null) {
+                System.out.println(pets[i].name + " is a " + pets[i].height + " feet and "+ pets[i].weight + " pound " + pets[i].petType + ". he is " + pets[i].age + " years old and he is " + pets[i].color);
+            }
+        }
+
+        ((Owl)pets[2]).barks();
+        String person = "Sal";
+        if (((Owl)pets[2]).pecks(person)) {
+            System.out.println("Sowl pecked Sal and Sowl flew away!");
+        }
+
+
+
     }
 }
