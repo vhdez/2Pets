@@ -3,72 +3,55 @@ package org.sla;
 public class Pet {
 
     String name;
-    int age;
-    String[] atributes;
     String color;
-    String size;
-    PetType type;
+    int age;
+    Pet[] friends;
+    int height, weight;
+    String petType;
 
-    public Pet(String name, int age, String color, String size, PetType type, String[] atributes){
+    public Pet(String name, String color, int age, int height, int weight, String petType){
         this.name = name;
-        this.age = age;
         this.color = color;
-        this.size = size;
-        this.type = type;
-        this.atributes = atributes;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
         this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.petType = petType;
+        friends = new Pet[256];
     }
 
-    public String[] getAtributes() {
-        return atributes;
+    public void addFriend(Pet pet){
+        if(friends != null && friends.length > 0){
+            for(int i = 0; i < friends.length; i++){
+                if(friends[i] == null){
+                    friends[i] = pet;
+                    return;
+                }
+            }
+        }
     }
 
-    public void setAtributes(String[] atributes) {
-        this.atributes = atributes;
+    public void announce(){
+        System.out.println(name + " is a " +
+                color + " " + petType +
+                " and is " + age +
+                " years old. It is " + height + " feet tall and it weighs " + weight + " lbs.");
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public PetType getType() {
-        return type;
-    }
-
-    public void setType(PetType type) {
-        this.type = type;
-    }
-
-    enum PetType{
-
-        DOG, CAT, HAMSTER, TURTLE;
+    public void announceFriends(){
+        if(friends != null){
+            if(friends.length > 0){
+                for(int i = 0; i < friends.length; i++){
+                    if(friends[i] != null){
+                        Pet friend = friends[i];
+                        if(i > 0){
+                            System.out.println(name +  " is also friends with " + friend.name + ", a " +friend.color.toLowerCase() + " " + petType + "." );
+                        }else {
+                            System.out.println(name + " is friends with " + friend.name + ", a " + friend.color.toLowerCase() + " " + petType + ".");
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
