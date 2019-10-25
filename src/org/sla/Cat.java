@@ -2,17 +2,26 @@ package org.sla;
 
 // Author: Mr. Hernandez
 
-public class Cat {
+public class Cat extends Pet{
     // Fields describe the class
-    String color;
-    String size;
-    int age;
-    String name;
-    String petType;
+
     String mood;
 
-    void meows() {
-        System.out.println("Meow!");
+
+    public Cat(String name, String color, int age, int height, int weight, String
+            petType, String myMood) {
+        super(name, color, age, height, weight, petType);
+        mood = myMood;
+    }
+
+
+   void meows() {
+        if (mood.equalsIgnoreCase("happy")) {
+            System.out.println("Meow!");
+        } else {
+
+            System.out.println("Hiss!");
+        }
     }
 
 

@@ -8,19 +8,7 @@ public class Pets {
     // Fields
     // Method
     public static void main(String[] args) {
-        Cat[] cats = new Cat[1];
-        cats[0] = new Cat();
-        cats[0].age = 4;
-        cats[0].color = "Black & White";
-        cats[0].size = "Small";
-        cats[0].name = "Lola";
-        cats[0].petType = "Cat";
-        cats[0].mood = "Sassy";
-        cats[0].meows();
 
-        for (int i = 0; i < cats.length; i++) {
-            System.out.println(cats[i].name + " is a " + cats[i].petType + " of age " + cats[i].age + " and is color " + cats[i].color + " and is of size " + cats[i].size + " and is acting " + cats[i].mood);
-        }
         Pet[] pets = new Pet[256];
         Bird[] birds = new Bird[2];
 
@@ -71,7 +59,7 @@ public class Pets {
         Red.feed(input);
 
 
-        pets[2] = new Owl("Sowl","Brown and Black", 3, 1, 1, "owl");
+        pets[3] = new Owl("Sowl","Brown and Black", 3, 1, 1, "owl");
 
         for (int i = 0; i < pets.length; i++) {
             if (pets[i] != null) {
@@ -79,12 +67,17 @@ public class Pets {
             }
         }
 
-        ((Owl)pets[2]).barks();
+        ((Owl)pets[3]).barks();
         String person = "Sal";
-        if (((Owl)pets[2]).pecks(person)) {
+        if (((Owl)pets[3]).pecks(person)) {
             System.out.println("Sowl pecked Sal and Sowl flew away!");
         }
 
+
+        pets[4] = new Cat("Lola,", "Black & White", 4, 1, 10, "Cat", "Happy");
+        System.out.println(pets[4].name + " is a " + pets[4].petType + " of age " + pets[4].age + " and is color " + pets[4].color + " and is of size " + pets[4].height + " feet and is  " + pets[4].weight + "lbs and is feeling " + ((Cat)pets[4]).mood);
+
+        ((Cat)pets[4]).meows();
 
 
     }
