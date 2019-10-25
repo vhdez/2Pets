@@ -4,8 +4,8 @@ public class Parrot extends Pet{
 
     boolean speak;
 
-    public Parrot(String name, String color, int age, int height, int weight, String petType){
-        super(name, color, age, height, weight, petType);
+    public Parrot(String name, String color, int age, int height, int weight){
+        super(name, color, age, height, weight, "parrot");
     }
 
 }
