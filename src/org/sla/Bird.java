@@ -18,7 +18,7 @@ public class Bird extends Pet{
 
 
 
-    void addToArray(Bird[] birds, int n){
+    void addToArray(Pet[] birds, int n){
 
         birds[n] = this;
 
@@ -27,10 +27,10 @@ public class Bird extends Pet{
 
     void chirp(){
 
-        if(!this.petType.equals("Angry")) {
-            System.out.println("Chirp!");
-        }else{
+        if(this.color.equals("Angry")) {
             System.out.println("Kaw!");
+        }else{
+            System.out.println("Chirp!");
         }
 
     }
@@ -59,13 +59,13 @@ public class Bird extends Pet{
 
         System.out.println("\n");
 
-        if(this.food.equals("cracker")){
-            System.out.println(this.name + " is uninspired by your \"creative\" food options.");
+        if(this.food.equals("cracker") || this.food.equals("bird feed") || this.food.equals("bird food")){
+            System.out.println(this.name + " is uninspired by your creative food options.");
             return true;
         }else if(this.food.equals("tuna")){
-            System.out.println("What were you thinking?! You summoned the mighty eagle.");
+            System.out.println("What were you thinking? You summoned the mighty eagle.");
             return false;
-        }else if(this.food.equals("egg") || this.food.equals("bird") || this.food.equals("birds")){
+        }else if(this.food.equals("egg") || this.food.equals("eggs")|| this.food.equals("bird") || this.food.equals("birds")){
             System.out.println("What the heck is wrong with you?!");
             return false;
         }else{
@@ -73,6 +73,17 @@ public class Bird extends Pet{
             return true;
         }
 
+    }
+
+    public boolean equals(Object bird) {
+        if (!super.equals(bird)) {
+            System.out.println(name);
+            System.out.println(((Bird)bird).name);
+            return (name.compareTo(((Bird)bird).name) == 0);
+        } else {
+
+            return super.equals(bird);
+        }
     }
 
 

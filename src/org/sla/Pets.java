@@ -1,6 +1,5 @@
 package org.sla;
-
-import java.util.Scanner;
+//import java.util.Scanner;
 
 // Author: Mr. Hernandez
 
@@ -8,17 +7,15 @@ public class Pets {
     // Fields
     // Method
     public static void main(String[] args) {
-
         Pet[] pets = new Pet[256];
-        Bird[] birds = new Bird[2];
 
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         // Mr. Hernandez did this
 
-        Bird Red = new Bird("Red", "Angry", 5, 5, 5, "Bird");
-        Bird Chuck = new Bird("Chuck", "Yellow", 5, 5, 3, "Bird");
-        Red.addToArray(birds, 0);
-        Chuck.addToArray(birds, 1);
+        Bird Red = new Bird("Red", "Angry", 5, 5, 5,"Bird");
+        Bird Chuck = new Bird("Chuck", "Yellow", 5, 5,3,"Bird");
+        Red.addToArray((pets), 9);
+        Chuck.addToArray(pets, 10);
         Red.addFriend(Chuck);
         Chuck.addFriend(Red);
         System.out.println("\n");
@@ -26,12 +23,25 @@ public class Pets {
         Chuck.fly();
         System.out.println("\n");
 
-        for (int i = 0; i < birds.length; i++) {
+        for (int i = 0; i < pets.length; i++) {
             //System.out.println("\n");
-            birds[i].announce();
-            birds[i].announceFriends();
-            System.out.println("\n");
+            if (pets[i] != null) {
+                if (pets[i].petType == "Bird") {
+                    pets[i].announce();
+                    pets[i].announceFriends();
+                    System.out.println("\n");
+                }
+            }
         }
+
+        Bird bird1 = new Bird("Nicco", "Angry", 5, 5, 5,"Bird");
+        Bird bird2 = new Bird("Nicco", "Angry", 5, 5, 5,"Bird");
+        if (bird1.equals(bird2)) {
+            System.out.println("bird1 EQUALS bird2");
+        } else {
+            System.out.println("bird1 NOT EQUAL bird2");
+        }
+
 
         Dog dog = new Dog("Hayden", "white", 10, 7, 10);
 
@@ -56,7 +66,8 @@ public class Pets {
         }
 
         System.out.println("\n");
-        Red.feed(input);
+
+        //Red.feed(input);
 
 
         pets[3] = new Owl("Sowl","Brown and Black", 3, 1, 1, "owl");
